@@ -1,6 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriverJobs", "DriverJobs\DriverJobs.csproj", "{7D2954C1-8F4F-4BC2-B5D0-A49C0E582B1C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriverJobs.Presentation", "DriverJobs.Presentation\DriverJobs.Presentation.csproj", "{7D2954C1-8F4F-4BC2-B5D0-A49C0E582B1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriverJobs.Application", "DriverJobs.Application\DriverJobs.Application.csproj", "{4AAFFD16-7709-4673-89A5-23F84413F952}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriverJobs.Domain", "DriverJobs.Domain\DriverJobs.Domain.csproj", "{06A8CFE9-CB98-484E-879A-6E643228C69B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriverJobs.Infrastructure", "DriverJobs.Infrastructure\DriverJobs.Infrastructure.csproj", "{E8115E08-D5D0-4AAE-8D84-87B06D5B8963}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +18,17 @@ Global
 		{7D2954C1-8F4F-4BC2-B5D0-A49C0E582B1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D2954C1-8F4F-4BC2-B5D0-A49C0E582B1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D2954C1-8F4F-4BC2-B5D0-A49C0E582B1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AAFFD16-7709-4673-89A5-23F84413F952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AAFFD16-7709-4673-89A5-23F84413F952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AAFFD16-7709-4673-89A5-23F84413F952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AAFFD16-7709-4673-89A5-23F84413F952}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06A8CFE9-CB98-484E-879A-6E643228C69B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06A8CFE9-CB98-484E-879A-6E643228C69B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06A8CFE9-CB98-484E-879A-6E643228C69B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06A8CFE9-CB98-484E-879A-6E643228C69B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8115E08-D5D0-4AAE-8D84-87B06D5B8963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8115E08-D5D0-4AAE-8D84-87B06D5B8963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8115E08-D5D0-4AAE-8D84-87B06D5B8963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8115E08-D5D0-4AAE-8D84-87B06D5B8963}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
