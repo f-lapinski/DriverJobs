@@ -1,5 +1,5 @@
-using Microsoft.AspNetCore.Identity;
 using DriverJobs.Data;
+using Microsoft.AspNetCore.Identity;
 
 namespace DriverJobs.Components.Account;
 
