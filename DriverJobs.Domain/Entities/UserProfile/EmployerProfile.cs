@@ -8,6 +8,5 @@ namespace DriverJobs.Domain.Entities.UserProfile
 {
     public class EmployerProfile : UserProfile
     {
-        public string AccountType { get; set; } = "Employer";
     }
 }

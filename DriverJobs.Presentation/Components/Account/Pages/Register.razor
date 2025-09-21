@@ -80,9 +80,11 @@
         if (!IsEmployerProfile)
         {
             user.UserProfile = new CandidateProfile();
+            user.UserProfile.AccountType = "Candidate";
         }
 
         user.UserProfile = new EmployerProfile();
+        user.UserProfile.AccountType = "Employer";
         
         var result = await UserManager.CreateAsync(user, Input.Password);
 

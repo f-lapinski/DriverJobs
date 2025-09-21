@@ -13,6 +13,8 @@ namespace DriverJobs.Domain.Entities.UserProfile
 
         public string ApplicationUserId { get; set; }
 
+        public string AccountType { get; set; }
+
         public ICollection<JobAd.JobAd> JobAds { get; set; }
     }
 }
