@@ -3,6 +3,7 @@
 @using System.ComponentModel.DataAnnotations
 @using System.Text
 @using System.Text.Encodings.Web
+@using DriverJobs.Domain.Entities.UserProfile
 @using Microsoft.AspNetCore.Identity
 @using Microsoft.AspNetCore.WebUtilities
 @using DriverJobs.Data
@@ -42,6 +43,9 @@
                 <label for="Input.ConfirmPassword">Confirm Password</label>
                 <ValidationMessage For="() => Input.ConfirmPassword" class="text-danger"/>
             </div>
+
+            <UserProfileSelector IsEmployerProfile="@IsEmployerProfile" />
+
             <button type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
         </EditForm>
     </div>
@@ -59,6 +63,8 @@
 
     [SupplyParameterFromForm] private InputModel Input { get; set; } = new();
 
+    public bool IsEmployerProfile { get; set; }
+
     [SupplyParameterFromQuery] private string? ReturnUrl { get; set; }
 
     private string? Message => identityErrors is null ? null : $"Error: {string.Join(", ", identityErrors.Select(error => error.Description))}";
@@ -70,6 +76,14 @@
         await UserStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
         var emailStore = GetEmailStore();
         await emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
+
+        if (!IsEmployerProfile)
+        {
+            user.UserProfile = new CandidateProfile();
+        }
+
+        user.UserProfile = new EmployerProfile();
+        
         var result = await UserManager.CreateAsync(user, Input.Password);
 
         if (!result.Succeeded)
@@ -140,6 +154,8 @@
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; } = "";
+
+        public string? SelectedProfile { get; set; }
     }
 
 }

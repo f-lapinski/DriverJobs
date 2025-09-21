@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DriverJobs.Domain.Entities
+namespace DriverJobs.Domain.Entities.JobAd
 {
     public class JobAd
     {
@@ -18,6 +18,8 @@ namespace DriverJobs.Domain.Entities
 
         public bool IsActive { get; set; } = false;
 
-        public string ApplicationUserId { get; set; }
+        public string UserProfileId { get; set; }
+
+        public UserProfile.UserProfile UserProfile { get; set; }
     }
 }

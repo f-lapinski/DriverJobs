@@ -1,0 +1,16 @@
+﻿@using DriverJobs.Domain.Entities.UserProfile
+@rendermode InteractiveServer
+
+<p>Are you Employer?</p>
+<MudSwitch @bind-Value="IsEmployerProfile" Color="Color.Success" UncheckedColor="Color.Error" />
+
+<p>Selected: @IsEmployerProfile</p>
+
+@code {
+
+    [Parameter]
+    public bool IsEmployerProfile { get; set; }
+    [Parameter]
+    public EventCallback<UserProfile> IsEmployerProfileProfileChanged { get; set; }
+
+}
